@@ -1,6 +1,5 @@
-import { NodeConnectionType, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
-import { userDescription } from './resources/user';
-import { companyDescription } from './resources/company';
+import type { INodeType, INodeTypeDescription } from 'n8n-workflow';
+import { similarVideosDescription } from './resources/similarVideos';
 
 export class Nexlev implements INodeType {
 	description: INodeTypeDescription = {
@@ -15,8 +14,8 @@ export class Nexlev implements INodeType {
 			name: 'Nexlev',
 		},
 		usableAsTool: true,
-		inputs: [NodeConnectionType.Main],
-		outputs: [NodeConnectionType.Main],
+		inputs: ['main'],
+		outputs: ['main'],
 		credentials: [{ name: 'nexlevApi', required: true }],
 		requestDefaults: {
 			baseURL: 'http://localhost:3001/api',
@@ -33,18 +32,13 @@ export class Nexlev implements INodeType {
 				noDataExpression: true,
 				options: [
 					{
-						name: 'User',
-						value: 'user',
-					},
-					{
-						name: 'Company',
-						value: 'company',
+						name: 'Similar Videos',
+						value: 'similarVideos',
 					},
 				],
-				default: 'user',
+				default: 'similarVideos',
 			},
-			...userDescription,
-			...companyDescription,
+			...similarVideosDescription,
 		],
 	};
 }
