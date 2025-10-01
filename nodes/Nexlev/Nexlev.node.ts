@@ -1,5 +1,8 @@
 import type { INodeType, INodeTypeDescription } from 'n8n-workflow';
 import { similarVideosDescription } from './resources/similarVideos';
+import { similarThumbnailsDescription } from './resources/similarThumbnails';
+import { similarChannelsDescription } from './resources/similarChannels';
+import { channelAnalyticsDescription } from './resources/channelAnalytics';
 
 export class Nexlev implements INodeType {
 	description: INodeTypeDescription = {
@@ -32,13 +35,28 @@ export class Nexlev implements INodeType {
 				noDataExpression: true,
 				options: [
 					{
-						name: 'Similar Videos',
+						name: 'Channel Analytic',
+						value: 'channelAnalytics',
+					},
+					{
+						name: 'Similar Video',
 						value: 'similarVideos',
+					},
+					{
+						name: 'Similar Thumbnail',
+						value: 'similarThumbnails',
+					},
+					{
+						name: 'Similar Channel',
+						value: 'similarChannels',
 					},
 				],
 				default: 'similarVideos',
 			},
+			...channelAnalyticsDescription,
 			...similarVideosDescription,
+			...similarThumbnailsDescription,
+			...similarChannelsDescription,
 		],
 	};
 }

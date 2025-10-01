@@ -5,7 +5,7 @@
   "license": "MIT",
   "homepage": "https://example.com",
   "keywords": ["n8n-community-node-package"],
-  "author": { "name": "Sohel Kabir", "email": "sohel.nkabir@gmail.com" },
+  "author": { "name": "Nexlev", "email": "contact@nexlev.io" },
   "repository": { "type": "git", "url": "" },
   "scripts": {
     "build": "n8n-node build",

@@ -2,6 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Nexlev = void 0;
 const similarVideos_1 = require("./resources/similarVideos");
+const similarThumbnails_1 = require("./resources/similarThumbnails");
+const similarChannels_1 = require("./resources/similarChannels");
+const channelAnalytics_1 = require("./resources/channelAnalytics");
 class Nexlev {
     constructor() {
         this.description = {
@@ -34,13 +37,28 @@ class Nexlev {
                     noDataExpression: true,
                     options: [
                         {
-                            name: 'Similar Videos',
+                            name: 'Channel Analytic',
+                            value: 'channelAnalytics',
+                        },
+                        {
+                            name: 'Similar Video',
                             value: 'similarVideos',
+                        },
+                        {
+                            name: 'Similar Thumbnail',
+                            value: 'similarThumbnails',
+                        },
+                        {
+                            name: 'Similar Channel',
+                            value: 'similarChannels',
                         },
                     ],
                     default: 'similarVideos',
                 },
+                ...channelAnalytics_1.channelAnalyticsDescription,
                 ...similarVideos_1.similarVideosDescription,
+                ...similarThumbnails_1.similarThumbnailsDescription,
+                ...similarChannels_1.similarChannelsDescription,
             ],
         };
     }
