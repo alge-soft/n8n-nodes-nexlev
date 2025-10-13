@@ -20,7 +20,7 @@ const getConfig = () => {
             };
         default:
             return {
-                baseURL: 'https://dev.extension.nexlev.io/api',
+                baseURL: 'https://prod.extension.nexlev.io/api',
             };
     }
 };

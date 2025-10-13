@@ -1,11 +1,16 @@
 {
     "name": "n8n-nodes-nexlev",
     "version": "0.1.0",
-    "description": "n8n community node to work with the Example API",
+    "description": "n8n community node for Nexlev YouTube analytics and similarity discovery platform",
     "license": "MIT",
-    "homepage": "https://example.com",
+    "homepage": "https://nexlev.io",
     "keywords": [
-        "n8n-community-node-package"
+        "n8n-community-node-package",
+        "n8n",
+        "nexlev",
+        "youtube-analytics",
+        "similar-videos",
+        "channel-analytics"
     ],
     "author": {
         "name": "Nexlev",
@@ -13,7 +18,7 @@
     },
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/alge-soft/n8n-nodes-nexlev"
     },
     "scripts": {
         "build": "n8n-node build",
