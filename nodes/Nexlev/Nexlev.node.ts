@@ -1,4 +1,5 @@
 import type { INodeType, INodeTypeDescription } from 'n8n-workflow';
+import { config } from './config';
 import { similarVideosDescription } from './resources/similarVideos';
 import { similarThumbnailsDescription } from './resources/similarThumbnails';
 import { similarChannelsDescription } from './resources/similarChannels';
@@ -21,7 +22,7 @@ export class Nexlev implements INodeType {
 		outputs: ['main'],
 		credentials: [{ name: 'nexlevApi', required: true }],
 		requestDefaults: {
-			baseURL: 'http://localhost:3001/api',
+			baseURL: config.baseURL,
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',

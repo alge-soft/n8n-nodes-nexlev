@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Nexlev = void 0;
+const config_1 = require("./config");
 const similarVideos_1 = require("./resources/similarVideos");
 const similarThumbnails_1 = require("./resources/similarThumbnails");
 const similarChannels_1 = require("./resources/similarChannels");
@@ -23,7 +24,7 @@ class Nexlev {
             outputs: ['main'],
             credentials: [{ name: 'nexlevApi', required: true }],
             requestDefaults: {
-                baseURL: 'http://localhost:3001/api',
+                baseURL: config_1.config.baseURL,
                 headers: {
                     Accept: 'application/json',
                     'Content-Type': 'application/json',
