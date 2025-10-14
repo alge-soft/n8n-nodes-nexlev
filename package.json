@@ -1,24 +1,24 @@
 {
-  "name": "n8n-nodes-xlab",
+  "name": "@nexlev/n8n-nodes-nexlev",
   "version": "0.1.0",
-  "description": "n8n community node for xLab YouTube analytics and similarity discovery platform",
+  "description": "n8n community node for Nexlev YouTube analytics and similarity discovery platform",
   "license": "MIT",
-  "homepage": "https://xlab.io",
+  "homepage": "https://nexlev.io",
   "keywords": [
     "n8n-community-node-package",
     "n8n",
-    "xlab",
+    "nexlev",
     "youtube-analytics",
     "similar-videos",
     "channel-analytics"
   ],
   "author": {
-    "name": "xLab",
-    "email": "contact@xlab.io"
+    "name": "Nexlev",
+    "email": "contact@nexlev.io"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alge-soft/n8n-nodes-xlab"
+    "url": "https://github.com/alge-soft/n8n-nodes-nexlev"
   },
   "scripts": {
     "build": "n8n-node build",
