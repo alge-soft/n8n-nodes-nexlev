@@ -4,6 +4,7 @@ import type {
 	ICredentialType,
 	INodeProperties,
 } from 'n8n-workflow';
+import { config } from '../nodes/Nexlev/config';
 
 export class NexlevApi implements ICredentialType {
 	name = 'nexlevApi';
@@ -35,8 +36,12 @@ export class NexlevApi implements ICredentialType {
 
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: 'http://localhost:3001/api',
-			url: '/v1/user',
+			baseURL: config.baseURL,
+			url: '/external/analytics/channel-analytics',
+			method: 'POST',
+			body: {
+				channelId: 'UCX6OQ3DkcsbYNE6H8uQQuVA',
+			},
 		},
 	};
 }

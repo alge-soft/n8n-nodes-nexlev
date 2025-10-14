@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NexlevApi = void 0;
+const config_1 = require("../nodes/Nexlev/config");
 class NexlevApi {
     constructor() {
         this.name = 'nexlevApi';
@@ -26,8 +27,12 @@ class NexlevApi {
         };
         this.test = {
             request: {
-                baseURL: 'http://localhost:3001/api',
-                url: '/v1/user',
+                baseURL: config_1.config.baseURL,
+                url: '/external/analytics/channel-analytics',
+                method: 'POST',
+                body: {
+                    channelId: 'UCX6OQ3DkcsbYNE6H8uQQuVA',
+                },
             },
         };
     }
