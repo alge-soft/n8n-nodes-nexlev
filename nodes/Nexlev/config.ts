@@ -1,11 +1,11 @@
 /**
  * Configuration for Nexlev API endpoints
  *
- * Environment variables:
- * - NEXLEV_ENV: 'local' | 'dev' | 'prod' (preferred)
- * - NODE_ENV: 'development' | 'production' (fallback)
+ * For published npm package: Hardcoded to production API
+ * For local development: Set NEXLEV_ENV environment variable
  *
  * Build commands:
+ * - npm run build       (uses hardcoded production URL)
  * - npm run build:local (uses http://localhost:3000/api)
  * - npm run build:dev   (uses https://dev.extension.nexlev.io/api)
  * - npm run build:prod  (uses https://prod.dashboard.nexlev.io/api)
@@ -16,7 +16,8 @@ export interface Config {
 }
 
 const getConfig = (): Config => {
-	const env = process.env.NEXLEV_ENV || process.env.NODE_ENV || 'dev';
+	// For local development, NEXLEV_ENV can override
+	const env = process.env.NEXLEV_ENV;
 
 	switch (env) {
 		case 'production':
@@ -34,8 +35,9 @@ const getConfig = (): Config => {
 				baseURL: 'http://localhost:3000/api',
 			};
 		default:
+			// Default for published package - uses DEV API for now
 			return {
-				baseURL: 'https://prod.extension.nexlev.io/api',
+				baseURL: 'https://dev.extension.nexlev.io/api',
 			};
 	}
 };
