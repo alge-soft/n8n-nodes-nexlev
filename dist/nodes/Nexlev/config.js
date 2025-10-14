@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.config = void 0;
 const getConfig = () => {
-    const env = process.env.NEXLEV_ENV || process.env.NODE_ENV || 'prod';
+    const env = process.env.NEXLEV_ENV || process.env.NODE_ENV || 'dev';
     switch (env) {
         case 'production':
         case 'prod':

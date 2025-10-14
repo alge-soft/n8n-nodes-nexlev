@@ -16,7 +16,7 @@ export interface Config {
 }
 
 const getConfig = (): Config => {
-	const env = process.env.NEXLEV_ENV || process.env.NODE_ENV || 'prod';
+	const env = process.env.NEXLEV_ENV || process.env.NODE_ENV || 'dev';
 
 	switch (env) {
 		case 'production':
