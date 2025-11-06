@@ -1,8 +1,8 @@
 import type { INodeProperties } from 'n8n-workflow';
 
-const showOnlyForVideoDetailsGetShortsDetails = {
+const showOnlyForVideosAndShortsGetShortsDetails = {
 	operation: ['getShortsDetails'],
-	resource: ['videoDetails'],
+	resource: ['videosAndShorts'],
 };
 
 export const videoDetailsGetShortsDetailsDescription: INodeProperties[] = [
@@ -13,7 +13,7 @@ export const videoDetailsGetShortsDetailsDescription: INodeProperties[] = [
 		default: '',
 		required: true,
 		displayOptions: {
-			show: showOnlyForVideoDetailsGetShortsDetails,
+			show: showOnlyForVideosAndShortsGetShortsDetails,
 		},
 		description: 'The YouTube shorts video ID to get details for',
 		routing: {

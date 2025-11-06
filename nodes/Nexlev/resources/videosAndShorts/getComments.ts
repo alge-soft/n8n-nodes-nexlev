@@ -1,8 +1,8 @@
 import type { INodeProperties } from 'n8n-workflow';
 
-const showOnlyForVideoDetailsGetComments = {
+const showOnlyForVideosAndShortsGetComments = {
 	operation: ['getComments'],
-	resource: ['videoDetails'],
+	resource: ['videosAndShorts'],
 };
 
 export const videoDetailsGetCommentsDescription: INodeProperties[] = [
@@ -13,7 +13,7 @@ export const videoDetailsGetCommentsDescription: INodeProperties[] = [
 		default: '',
 		required: true,
 		displayOptions: {
-			show: showOnlyForVideoDetailsGetComments,
+			show: showOnlyForVideosAndShortsGetComments,
 		},
 		description: 'The YouTube video ID to get comments for',
 		routing: {

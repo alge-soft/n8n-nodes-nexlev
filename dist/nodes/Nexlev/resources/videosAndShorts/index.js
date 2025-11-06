@@ -5,8 +5,8 @@ const getDetails_1 = require("./getDetails");
 const getShortsDetails_1 = require("./getShortsDetails");
 const getComments_1 = require("./getComments");
 const getTranscript_1 = require("./getTranscript");
-const showOnlyForVideoDetails = {
-    resource: ['videoDetails'],
+const showOnlyForVideosAndShorts = {
+    resource: ['videosAndShorts'],
 };
 exports.videoDetailsDescription = [
     {
@@ -15,7 +15,7 @@ exports.videoDetailsDescription = [
         type: 'options',
         noDataExpression: true,
         displayOptions: {
-            show: showOnlyForVideoDetails,
+            show: showOnlyForVideosAndShorts,
         },
         options: [
             {

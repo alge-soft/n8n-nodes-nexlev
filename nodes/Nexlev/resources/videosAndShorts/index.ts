@@ -4,8 +4,8 @@ import { videoDetailsGetShortsDetailsDescription } from './getShortsDetails';
 import { videoDetailsGetCommentsDescription } from './getComments';
 import { videoDetailsGetTranscriptDescription } from './getTranscript';
 
-const showOnlyForVideoDetails = {
-	resource: ['videoDetails'],
+const showOnlyForVideosAndShorts = {
+	resource: ['videosAndShorts'],
 };
 
 export const videoDetailsDescription: INodeProperties[] = [
@@ -15,7 +15,7 @@ export const videoDetailsDescription: INodeProperties[] = [
 		type: 'options',
 		noDataExpression: true,
 		displayOptions: {
-			show: showOnlyForVideoDetails,
+			show: showOnlyForVideosAndShorts,
 		},
 		options: [
 			{

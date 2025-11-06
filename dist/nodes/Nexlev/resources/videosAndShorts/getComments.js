@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.videoDetailsGetDetailsDescription = void 0;
-const showOnlyForVideoDetailsGetDetails = {
-    operation: ['getDetails'],
-    resource: ['videoDetails'],
+exports.videoDetailsGetCommentsDescription = void 0;
+const showOnlyForVideosAndShortsGetComments = {
+    operation: ['getComments'],
+    resource: ['videosAndShorts'],
 };
-exports.videoDetailsGetDetailsDescription = [
+exports.videoDetailsGetCommentsDescription = [
     {
         displayName: 'Video ID',
         name: 'videoId',
@@ -13,9 +13,9 @@ exports.videoDetailsGetDetailsDescription = [
         default: '',
         required: true,
         displayOptions: {
-            show: showOnlyForVideoDetailsGetDetails,
+            show: showOnlyForVideosAndShortsGetComments,
         },
-        description: 'The YouTube video ID to get details for',
+        description: 'The YouTube video ID to get comments for',
         routing: {
             send: {
                 type: 'query',
@@ -24,4 +24,4 @@ exports.videoDetailsGetDetailsDescription = [
         },
     },
 ];
-//# sourceMappingURL=getDetails.js.map
+//# sourceMappingURL=getComments.js.map

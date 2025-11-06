@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.videoDetailsGetShortsDetailsDescription = void 0;
-const showOnlyForVideoDetailsGetShortsDetails = {
+const showOnlyForVideosAndShortsGetShortsDetails = {
     operation: ['getShortsDetails'],
-    resource: ['videoDetails'],
+    resource: ['videosAndShorts'],
 };
 exports.videoDetailsGetShortsDetailsDescription = [
     {
@@ -13,7 +13,7 @@ exports.videoDetailsGetShortsDetailsDescription = [
         default: '',
         required: true,
         displayOptions: {
-            show: showOnlyForVideoDetailsGetShortsDetails,
+            show: showOnlyForVideosAndShortsGetShortsDetails,
         },
         description: 'The YouTube shorts video ID to get details for',
         routing: {

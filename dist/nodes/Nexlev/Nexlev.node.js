@@ -8,7 +8,7 @@ const similarChannels_1 = require("./resources/similarChannels");
 const channelAnalytics_1 = require("./resources/channelAnalytics");
 const channelAnalysis_1 = require("./resources/channelAnalysis");
 const channelContent_1 = require("./resources/channelContent");
-const videoDetails_1 = require("./resources/videoDetails");
+const videosAndShorts_1 = require("./resources/videosAndShorts");
 const nicheOverview_1 = require("./resources/nicheOverview");
 class Nexlev {
     constructor() {
@@ -70,8 +70,8 @@ class Nexlev {
                             value: 'similarVideos',
                         },
                         {
-                            name: 'Video Detail',
-                            value: 'videoDetails',
+                            name: 'Videos and Short',
+                            value: 'videosAndShorts',
                         },
                     ],
                     default: 'similarVideos',
@@ -83,7 +83,7 @@ class Nexlev {
                 ...similarVideos_1.similarVideosDescription,
                 ...similarThumbnails_1.similarThumbnailsDescription,
                 ...similarChannels_1.similarChannelsDescription,
-                ...videoDetails_1.videoDetailsDescription,
+                ...videosAndShorts_1.videoDetailsDescription,
             ],
         };
     }

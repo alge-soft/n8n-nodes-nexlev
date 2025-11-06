@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.videoDetailsGetTranscriptDescription = void 0;
-const showOnlyForVideoDetailsGetTranscript = {
+const showOnlyForVideosAndShortsGetTranscript = {
     operation: ['getTranscript'],
-    resource: ['videoDetails'],
+    resource: ['videosAndShorts'],
 };
 exports.videoDetailsGetTranscriptDescription = [
     {
@@ -13,7 +13,7 @@ exports.videoDetailsGetTranscriptDescription = [
         default: '',
         required: true,
         displayOptions: {
-            show: showOnlyForVideoDetailsGetTranscript,
+            show: showOnlyForVideosAndShortsGetTranscript,
         },
         description: 'The YouTube video ID to get transcript for',
         routing: {
