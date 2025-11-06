@@ -17,7 +17,7 @@ export interface Config {
 
 const getConfig = (): Config => {
 	// For local development, NEXLEV_ENV can override
-	const env = process.env.NEXLEV_ENV;
+	const env = process.env.NEXLEV_ENV || 'dev';
 
 	switch (env) {
 		case 'production':
