@@ -33,6 +33,10 @@ exports.channelContentGetShortsDescription = [
                 value: 'latest',
             },
             {
+                name: 'Popular',
+                value: 'popular',
+            },
+            {
                 name: 'Oldest',
                 value: 'oldest',
             },
@@ -42,7 +46,7 @@ exports.channelContentGetShortsDescription = [
         displayOptions: {
             show: showOnlyForChannelContentGetShorts,
         },
-        description: 'Sort shorts by upload date',
+        description: 'Sort shorts by upload date or popularity',
         routing: {
             send: {
                 type: 'query',

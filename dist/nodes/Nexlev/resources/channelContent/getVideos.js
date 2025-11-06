@@ -29,16 +29,24 @@ exports.channelContentGetVideosDescription = [
         type: 'options',
         options: [
             {
+                name: 'Latest',
+                value: 'latest',
+            },
+            {
                 name: 'Popular',
                 value: 'popular',
             },
+            {
+                name: 'Oldest',
+                value: 'oldest',
+            },
         ],
-        default: 'popular',
+        default: 'latest',
         required: true,
         displayOptions: {
             show: showOnlyForChannelContentGetVideos,
         },
-        description: 'Sort videos by popularity',
+        description: 'Sort videos by upload date or popularity',
         routing: {
             send: {
                 type: 'query',
