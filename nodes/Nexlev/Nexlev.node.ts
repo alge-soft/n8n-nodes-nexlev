@@ -7,6 +7,7 @@ import { channelAnalyticsDescription } from './resources/channelAnalytics';
 import { channelAnalysisDescription } from './resources/channelAnalysis';
 import { channelContentDescription } from './resources/channelContent';
 import { videoDetailsDescription } from './resources/videoDetails';
+import { nicheOverviewDescription } from './resources/nicheOverview';
 
 export class Nexlev implements INodeType {
 	description: INodeTypeDescription = {
@@ -51,6 +52,10 @@ export class Nexlev implements INodeType {
 						value: 'channelContent',
 					},
 					{
+						name: 'Niche Overview',
+						value: 'nicheOverview',
+					},
+					{
 						name: 'Similar Channel',
 						value: 'similarChannels',
 					},
@@ -72,6 +77,7 @@ export class Nexlev implements INodeType {
 			...channelAnalyticsDescription,
 			...channelAnalysisDescription,
 			...channelContentDescription,
+			...nicheOverviewDescription,
 			...similarVideosDescription,
 			...similarThumbnailsDescription,
 			...similarChannelsDescription,

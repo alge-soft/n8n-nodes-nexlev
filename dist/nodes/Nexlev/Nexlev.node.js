@@ -9,6 +9,7 @@ const channelAnalytics_1 = require("./resources/channelAnalytics");
 const channelAnalysis_1 = require("./resources/channelAnalysis");
 const channelContent_1 = require("./resources/channelContent");
 const videoDetails_1 = require("./resources/videoDetails");
+const nicheOverview_1 = require("./resources/nicheOverview");
 class Nexlev {
     constructor() {
         this.description = {
@@ -53,6 +54,10 @@ class Nexlev {
                             value: 'channelContent',
                         },
                         {
+                            name: 'Niche Overview',
+                            value: 'nicheOverview',
+                        },
+                        {
                             name: 'Similar Channel',
                             value: 'similarChannels',
                         },
@@ -74,6 +79,7 @@ class Nexlev {
                 ...channelAnalytics_1.channelAnalyticsDescription,
                 ...channelAnalysis_1.channelAnalysisDescription,
                 ...channelContent_1.channelContentDescription,
+                ...nicheOverview_1.nicheOverviewDescription,
                 ...similarVideos_1.similarVideosDescription,
                 ...similarThumbnails_1.similarThumbnailsDescription,
                 ...similarChannels_1.similarChannelsDescription,
