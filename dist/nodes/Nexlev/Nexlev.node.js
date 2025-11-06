@@ -6,6 +6,9 @@ const similarVideos_1 = require("./resources/similarVideos");
 const similarThumbnails_1 = require("./resources/similarThumbnails");
 const similarChannels_1 = require("./resources/similarChannels");
 const channelAnalytics_1 = require("./resources/channelAnalytics");
+const channelAnalysis_1 = require("./resources/channelAnalysis");
+const channelContent_1 = require("./resources/channelContent");
+const videoDetails_1 = require("./resources/videoDetails");
 class Nexlev {
     constructor() {
         this.description = {
@@ -38,28 +41,43 @@ class Nexlev {
                     noDataExpression: true,
                     options: [
                         {
+                            name: 'Channel Analysis',
+                            value: 'channelAnalysis',
+                        },
+                        {
                             name: 'Channel Analytic',
                             value: 'channelAnalytics',
                         },
                         {
-                            name: 'Similar Video',
-                            value: 'similarVideos',
+                            name: 'Channel Content',
+                            value: 'channelContent',
+                        },
+                        {
+                            name: 'Similar Channel',
+                            value: 'similarChannels',
                         },
                         {
                             name: 'Similar Thumbnail',
                             value: 'similarThumbnails',
                         },
                         {
-                            name: 'Similar Channel',
-                            value: 'similarChannels',
+                            name: 'Similar Video',
+                            value: 'similarVideos',
+                        },
+                        {
+                            name: 'Video Detail',
+                            value: 'videoDetails',
                         },
                     ],
                     default: 'similarVideos',
                 },
                 ...channelAnalytics_1.channelAnalyticsDescription,
+                ...channelAnalysis_1.channelAnalysisDescription,
+                ...channelContent_1.channelContentDescription,
                 ...similarVideos_1.similarVideosDescription,
                 ...similarThumbnails_1.similarThumbnailsDescription,
                 ...similarChannels_1.similarChannelsDescription,
+                ...videoDetails_1.videoDetailsDescription,
             ],
         };
     }

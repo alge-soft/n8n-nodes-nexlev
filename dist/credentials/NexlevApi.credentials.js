@@ -6,6 +6,7 @@ class NexlevApi {
     constructor() {
         this.name = 'nexlevApi';
         this.displayName = 'Nexlev API';
+        this.icon = 'file:../nodes/Nexlev/nexlev.svg';
         this.documentationUrl = 'https://github.com/org/-nexlev?tab=readme-ov-file#credentials';
         this.properties = [
             {

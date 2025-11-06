@@ -2,6 +2,7 @@ import type {
 	IAuthenticateGeneric,
 	ICredentialTestRequest,
 	ICredentialType,
+	Icon,
 	INodeProperties,
 } from 'n8n-workflow';
 import { config } from '../nodes/Nexlev/config';
@@ -10,6 +11,8 @@ export class NexlevApi implements ICredentialType {
 	name = 'nexlevApi';
 
 	displayName = 'Nexlev API';
+
+	icon: Icon = 'file:../nodes/Nexlev/nexlev.svg';
 
 	// Link to your community node's README
 	documentationUrl = 'https://github.com/org/-nexlev?tab=readme-ov-file#credentials';
