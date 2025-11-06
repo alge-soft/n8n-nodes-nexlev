@@ -15,31 +15,8 @@ export interface Config {
 	baseURL: string;
 }
 
-const getConfig = (): Config => {
-	// For local development, NEXLEV_ENV can override
-	const env = process.env.NEXLEV_ENV || 'dev';
-
-	switch (env) {
-		case 'production':
-		case 'prod':
-			return {
-				baseURL: 'https://prod.dashboard.nexlev.io/api',
-			};
-		case 'development':
-		case 'dev':
-			return {
-				baseURL: 'https://dev.extension.nexlev.io/api',
-			};
-		case 'local':
-			return {
-				baseURL: 'http://localhost:3000/api',
-			};
-		default:
-			// Default for published package - uses DEV API for now
-			return {
-				baseURL: 'https://dev.extension.nexlev.io/api',
-			};
-	}
+// Configuration is set at build time via build scripts
+// Default configuration for published package
+export const config: Config = {
+	baseURL: 'https://dev.extension.nexlev.io/api',
 };
-
-export const config = getConfig();
