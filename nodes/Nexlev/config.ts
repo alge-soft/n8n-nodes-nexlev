@@ -15,8 +15,29 @@ export interface Config {
 	baseURL: string;
 }
 
+export enum Environment {
+	DEV = 'dev',
+	PROD = 'prod',
+	LOCAL = 'local',
+}
+
+// Configuration environment - change this to Environment.DEV or Environment.LOCAL for development URLs
+export const ENVIRONMENT = Environment.PROD;
+
+const getBaseURL = (env: Environment): string => {
+	switch (env) {
+		case Environment.PROD:
+			return 'https://prod.dashboard.nexlev.io/api';
+		case Environment.DEV:
+			return 'https://dev.extension.nexlev.io/api';
+		case Environment.LOCAL:
+		default:
+			return 'http://localhost:3001/api';
+	}
+};
+
 // Configuration is set at build time via build scripts
 // Default configuration for published package
 export const config: Config = {
-	baseURL: 'https://dev.extension.nexlev.io/api',
+	baseURL: getBaseURL(ENVIRONMENT),
 };
