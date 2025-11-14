@@ -58,7 +58,7 @@ To use this node, you need to obtain an API key from Nexlev.
 
 - **Minimum n8n version**: 1.0.0
 - **Tested with**: n8n 1.x
-- **Node version**: 0.1.0
+- **Node version**: 0.1.7
 
 ## Usage
 
@@ -85,6 +85,15 @@ To use this node, you need to obtain an API key from Nexlev.
 - [YouTube Analytics API](https://developers.google.com/youtube/analytics)
 
 ## Version history
+
+### 0.1.7
+
+- Bug fixes and improvements
+- Enhanced stability
+
+### 0.1.6
+
+- Improvements and updates
 
 ### 0.1.0
 
