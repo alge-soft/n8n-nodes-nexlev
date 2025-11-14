@@ -22,23 +22,45 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 
 The Nexlev node supports the following operations:
 
+### Channel Analysis
+
+- **Create Job**: Create a new channel analysis job
+- **Get Result**: Get the status and results of a channel analysis job
+
 ### Channel Analytics
 
-- **Get Analytics**: Retrieve comprehensive analytics data for a YouTube channel including views, subscribers, revenue metrics, and performance indicators
-- **Get Geography Demographics Revenue**: Get detailed geographic distribution, demographic breakdown, and revenue data for a YouTube channel
-- **Get Short vs Long Views**: Compare short-form video performance against long-form content for a YouTube channel
+- **Get Analytics**: Retrieve comprehensive analytics data for a YouTube channel
+- **Get Geography Demographics Revenue**: Get geographic distribution, demographic breakdown, and revenue data
+- **Get Short vs Long Views**: Compare short-form vs long-form content performance
 
-### Similar Videos
+### Channel Content
 
-- **Get Similar Videos**: Find videos similar to a given YouTube video based on content analysis, returning similarity scores and video metadata
+- **Get About**: Get about information for a YouTube channel
+- **Get Videos**: Get videos from a YouTube channel
+- **Get Shorts**: Get short videos from a YouTube channel
 
-### Similar Thumbnails
+### Niche Overview
 
-- **Search Similar Thumbnails**: Discover similar video thumbnails based on text descriptions or image URLs, useful for content inspiration and trend analysis
+- **Analyze**: Analyze and get niche overview for a YouTube channel
 
 ### Similar Channels
 
-- **Search Similar Channels**: Find YouTube channels similar to a given channel based on content type, audience demographics, and performance metrics
+- **Search Similar Channels**: Find similar YouTube channels based on content type and audience
+
+### Similar Thumbnails
+
+- **Search Similar Thumbnails**: Discover similar video thumbnails for content inspiration
+
+### Similar Videos
+
+- **Get Similar Videos**: Find videos similar to a given video with similarity scores
+
+### Videos and Shorts
+
+- **Get Comments**: Get comments for a YouTube video
+- **Get Details**: Get detailed information for a YouTube video
+- **Get Shorts Details**: Get detailed information for a YouTube shorts video
+- **Get Transcript**: Get transcript for a YouTube video
 
 ## Credentials
 
@@ -58,7 +80,7 @@ To use this node, you need to obtain an API key from Nexlev.
 
 - **Minimum n8n version**: 1.0.0
 - **Tested with**: n8n 1.x
-- **Node version**: 0.1.8
+- **Node version**: 0.1.9
 
 ## Usage
 
@@ -84,6 +106,12 @@ To use this node, you need to obtain an API key from Nexlev.
 - [Nexlev n8n Integration Dashboard](https://dashboard.nexlev.io/n8n-youtube) - Get your API key and documentation
 
 ## Version history
+
+### 0.1.9
+
+- Added comprehensive operations documentation for all resources
+- Improved .gitignore with best practices
+- Better repository structure
 
 ### 0.1.8
 
