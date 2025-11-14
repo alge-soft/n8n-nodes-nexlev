@@ -46,8 +46,8 @@ To use this node, you need to obtain an API key from Nexlev.
 
 ### Prerequisites
 
-- Sign up for a Nexlev account at [nexlev.io](https://nexlev.io)
-- Generate an API key from your Nexlev dashboard
+- Sign up for a Nexlev account and get your API key at [dashboard.nexlev.io/n8n-youtube](https://dashboard.nexlev.io/n8n-youtube)
+- The dashboard provides everything you need to get started with the n8n integration
 
 ### Authentication Method
 
@@ -58,7 +58,7 @@ To use this node, you need to obtain an API key from Nexlev.
 
 - **Minimum n8n version**: 1.0.0
 - **Tested with**: n8n 1.x
-- **Node version**: 0.1.7
+- **Node version**: 0.1.8
 
 ## Usage
 
@@ -81,10 +81,14 @@ To use this node, you need to obtain an API key from Nexlev.
 ## Resources
 
 - [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
-- [Nexlev Documentation](https://nexlev.io/docs)
-- [YouTube Analytics API](https://developers.google.com/youtube/analytics)
+- [Nexlev n8n Integration Dashboard](https://dashboard.nexlev.io/n8n-youtube) - Get your API key and documentation
 
 ## Version history
+
+### 0.1.8
+
+- Updated documentation with correct Nexlev dashboard links
+- Improved getting started experience
 
 ### 0.1.7
 
