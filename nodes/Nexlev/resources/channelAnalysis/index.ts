@@ -23,7 +23,7 @@ export const channelAnalysisDescription: INodeProperties[] = [
 				description: 'Create a new channel analysis job',
 				routing: {
 					request: {
-						method: 'POST',
+						method: 'GET',
 						url: '/external/channels/analysis/job/create',
 					},
 				},

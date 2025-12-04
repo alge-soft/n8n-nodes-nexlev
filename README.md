@@ -80,7 +80,7 @@ To use this node, you need to obtain an API key from Nexlev.
 
 - **Minimum n8n version**: 1.0.0
 - **Tested with**: n8n 1.x
-- **Node version**: 0.1.9
+- **Node version**: 0.1.10
 
 ## Usage
 
@@ -106,6 +106,10 @@ To use this node, you need to obtain an API key from Nexlev.
 - [Nexlev n8n Integration Dashboard](https://dashboard.nexlev.io/n8n-youtube) - Get your API key and documentation
 
 ## Version history
+
+### 0.1.10
+
+- Fixed channel analysis job creation endpoint to use GET method
 
 ### 0.1.9
 
