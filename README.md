@@ -36,6 +36,7 @@ The Nexlev node supports the following operations:
 ### Channel Content
 
 - **Get About**: Get about information for a YouTube channel
+- **Get Playlists**: Get playlists from a YouTube channel
 - **Get Videos**: Get videos from a YouTube channel
 - **Get Shorts**: Get short videos from a YouTube channel
 
@@ -57,6 +58,7 @@ The Nexlev node supports the following operations:
 
 ### Videos and Shorts
 
+- **Get Bulk Transcript**: Get transcripts for multiple YouTube videos
 - **Get Comments**: Get comments for a YouTube video
 - **Get Details**: Get detailed information for a YouTube video
 - **Get Shorts Details**: Get detailed information for a YouTube shorts video
@@ -80,7 +82,7 @@ To use this node, you need to obtain an API key from Nexlev.
 
 - **Minimum n8n version**: 1.0.0
 - **Tested with**: n8n 1.x
-- **Node version**: 0.1.10
+- **Node version**: 0.2.0
 
 ## Usage
 
@@ -106,6 +108,14 @@ To use this node, you need to obtain an API key from Nexlev.
 - [Nexlev n8n Integration Dashboard](https://dashboard.nexlev.io/n8n-youtube) - Get your API key and documentation
 
 ## Version history
+
+### 0.2.0
+
+- Added support for getting playlists from YouTube channels
+- Added bulk transcript API for processing multiple videos
+- Added sub API support
+- Added support for videoURL parameter in similar videos operations
+- Fixed channel analysis job creation endpoint to use GET method
 
 ### 0.1.10
 
