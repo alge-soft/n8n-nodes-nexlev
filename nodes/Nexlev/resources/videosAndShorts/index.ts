@@ -4,6 +4,8 @@ import { videoDetailsGetShortsDetailsDescription } from './getShortsDetails';
 import { videoDetailsGetCommentsDescription } from './getComments';
 import { videoDetailsGetTranscriptDescription } from './getTranscript';
 import { videoDetailsGetBulkTranscriptDescription } from './getBulkTranscript';
+import { videoDetailsGetSubtitleDescription } from './getSubtitle';
+import { videoDetailsGetBulkSubtitleDescription } from './getBulkSubtitle';
 
 const showOnlyForVideosAndShorts = {
 	resource: ['videosAndShorts'],
@@ -19,6 +21,18 @@ export const videoDetailsDescription: INodeProperties[] = [
 			show: showOnlyForVideosAndShorts,
 		},
 		options: [
+			{
+				name: 'Get Bulk Subtitle',
+				value: 'getBulkSubtitle',
+				action: 'Get bulk video subtitles',
+				description: 'Get subtitles for multiple YouTube videos at once',
+				routing: {
+					request: {
+						method: 'POST',
+						url: '/external/videos/bulk-subtitle',
+					},
+				},
+			},
 			{
 				name: 'Get Bulk Transcript',
 				value: 'getBulkTranscript',
@@ -68,6 +82,18 @@ export const videoDetailsDescription: INodeProperties[] = [
 				},
 			},
 			{
+				name: 'Get Subtitle',
+				value: 'getSubtitle',
+				action: 'Get video subtitle',
+				description: 'Get subtitle for a YouTube video',
+				routing: {
+					request: {
+						method: 'GET',
+						url: '/external/videos/subtitle',
+					},
+				},
+			},
+			{
 				name: 'Get Transcript',
 				value: 'getTranscript',
 				action: 'Get video transcript',
@@ -87,4 +113,6 @@ export const videoDetailsDescription: INodeProperties[] = [
 	...videoDetailsGetShortsDetailsDescription,
 	...videoDetailsGetTranscriptDescription,
 	...videoDetailsGetBulkTranscriptDescription,
+	...videoDetailsGetSubtitleDescription,
+	...videoDetailsGetBulkSubtitleDescription,
 ];
