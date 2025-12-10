@@ -3,6 +3,7 @@ import { videoDetailsGetDetailsDescription } from './getDetails';
 import { videoDetailsGetShortsDetailsDescription } from './getShortsDetails';
 import { videoDetailsGetCommentsDescription } from './getComments';
 import { videoDetailsGetTranscriptDescription } from './getTranscript';
+import { videoDetailsGetBulkTranscriptDescription } from './getBulkTranscript';
 
 const showOnlyForVideosAndShorts = {
 	resource: ['videosAndShorts'],
@@ -18,6 +19,18 @@ export const videoDetailsDescription: INodeProperties[] = [
 			show: showOnlyForVideosAndShorts,
 		},
 		options: [
+			{
+				name: 'Get Bulk Transcript',
+				value: 'getBulkTranscript',
+				action: 'Get bulk video transcripts',
+				description: 'Get transcripts for multiple YouTube videos at once',
+				routing: {
+					request: {
+						method: 'POST',
+						url: '/external/videos/bulk-transcript',
+					},
+				},
+			},
 			{
 				name: 'Get Comments',
 				value: 'getComments',
@@ -73,4 +86,5 @@ export const videoDetailsDescription: INodeProperties[] = [
 	...videoDetailsGetDetailsDescription,
 	...videoDetailsGetShortsDetailsDescription,
 	...videoDetailsGetTranscriptDescription,
+	...videoDetailsGetBulkTranscriptDescription,
 ];
