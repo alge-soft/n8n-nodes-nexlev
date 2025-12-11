@@ -23,5 +23,22 @@ exports.videoDetailsGetCommentsDescription = [
             },
         },
     },
+    {
+        displayName: 'Continuation Token',
+        name: 'continuationToken',
+        type: 'string',
+        typeOptions: { password: true },
+        default: '',
+        displayOptions: {
+            show: showOnlyForVideosAndShortsGetComments,
+        },
+        description: 'Token for pagination (use continuation value from previous response)',
+        routing: {
+            send: {
+                type: 'query',
+                property: 'token',
+            },
+        },
+    },
 ];
 //# sourceMappingURL=getComments.js.map

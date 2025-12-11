@@ -67,5 +67,25 @@ exports.similarThumbnailsSearchDescription = [
             },
         },
     },
+    {
+        displayName: 'Number of Images',
+        name: 'k',
+        type: 'number',
+        typeOptions: {
+            minValue: 1,
+            maxValue: 50,
+        },
+        default: 25,
+        displayOptions: {
+            show: showOnlyForSimilarThumbnailsSearch,
+        },
+        description: 'Number of similar thumbnail images to return (1-50)',
+        routing: {
+            send: {
+                type: 'body',
+                property: 'k',
+            },
+        },
+    },
 ];
 //# sourceMappingURL=getSimilar.js.map
