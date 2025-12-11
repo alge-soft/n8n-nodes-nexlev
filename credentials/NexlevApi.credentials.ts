@@ -2,13 +2,17 @@ import type {
 	IAuthenticateGeneric,
 	ICredentialTestRequest,
 	ICredentialType,
+	Icon,
 	INodeProperties,
 } from 'n8n-workflow';
+import { config } from '../nodes/Nexlev/config';
 
 export class NexlevApi implements ICredentialType {
 	name = 'nexlevApi';
 
 	displayName = 'Nexlev API';
+
+	icon: Icon = 'file:../nodes/Nexlev/nexlev.svg';
 
 	// Link to your community node's README
 	documentationUrl = 'https://github.com/org/-nexlev?tab=readme-ov-file#credentials';
@@ -35,8 +39,12 @@ export class NexlevApi implements ICredentialType {
 
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: 'http://localhost:3001/api',
-			url: '/v1/user',
+			baseURL: config.baseURL,
+			url: '/external/analytics/channel-analytics',
+			method: 'POST',
+			body: {
+				channelId: 'UCX6OQ3DkcsbYNE6H8uQQuVA',
+			},
 		},
 	};
 }

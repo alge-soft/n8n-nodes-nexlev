@@ -1,6 +1,13 @@
-import { NodeConnectionType, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
-import { userDescription } from './resources/user';
-import { companyDescription } from './resources/company';
+import type { INodeType, INodeTypeDescription } from 'n8n-workflow';
+import { config } from './config';
+import { similarVideosDescription } from './resources/similarVideos';
+import { similarThumbnailsDescription } from './resources/similarThumbnails';
+import { similarChannelsDescription } from './resources/similarChannels';
+import { channelAnalyticsDescription } from './resources/channelAnalytics';
+import { channelAnalysisDescription } from './resources/channelAnalysis';
+import { channelContentDescription } from './resources/channelContent';
+import { videoDetailsDescription } from './resources/videosAndShorts';
+import { nicheOverviewDescription } from './resources/nicheOverview';
 
 export class Nexlev implements INodeType {
 	description: INodeTypeDescription = {
@@ -15,11 +22,11 @@ export class Nexlev implements INodeType {
 			name: 'Nexlev',
 		},
 		usableAsTool: true,
-		inputs: [NodeConnectionType.Main],
-		outputs: [NodeConnectionType.Main],
+		inputs: ['main'],
+		outputs: ['main'],
 		credentials: [{ name: 'nexlevApi', required: true }],
 		requestDefaults: {
-			baseURL: 'http://localhost:3001/api',
+			baseURL: config.baseURL,
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
@@ -33,18 +40,48 @@ export class Nexlev implements INodeType {
 				noDataExpression: true,
 				options: [
 					{
-						name: 'User',
-						value: 'user',
+						name: 'Channel Analysis',
+						value: 'channelAnalysis',
 					},
 					{
-						name: 'Company',
-						value: 'company',
+						name: 'Channel Analytic',
+						value: 'channelAnalytics',
+					},
+					{
+						name: 'Channel Content',
+						value: 'channelContent',
+					},
+					{
+						name: 'Niche Overview',
+						value: 'nicheOverview',
+					},
+					{
+						name: 'Similar Channel',
+						value: 'similarChannels',
+					},
+					{
+						name: 'Similar Thumbnail',
+						value: 'similarThumbnails',
+					},
+					{
+						name: 'Similar Video',
+						value: 'similarVideos',
+					},
+					{
+						name: 'Videos and Short',
+						value: 'videosAndShorts',
 					},
 				],
-				default: 'user',
+				default: 'similarVideos',
 			},
-			...userDescription,
-			...companyDescription,
+			...channelAnalyticsDescription,
+			...channelAnalysisDescription,
+			...channelContentDescription,
+			...nicheOverviewDescription,
+			...similarVideosDescription,
+			...similarThumbnailsDescription,
+			...similarChannelsDescription,
+			...videoDetailsDescription,
 		],
 	};
 }

@@ -1,0 +1,59 @@
+{
+    "name": "@nexlev/n8n-nodes-nexlev",
+    "version": "0.2.1",
+    "description": "n8n community node for Nexlev",
+    "license": "MIT",
+    "homepage": "https://nexlev.io",
+    "keywords": [
+        "n8n-community-node-package",
+        "n8n",
+        "nexlev",
+        "youtube-analytics",
+        "similar-videos",
+        "channel-analytics"
+    ],
+    "author": {
+        "name": "Nexlev",
+        "email": "contact@nexlev.io"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alge-soft/n8n-nodes-nexlev"
+    },
+    "scripts": {
+        "build": "n8n-node build",
+        "build:dev": "NEXLEV_ENV=dev n8n-node build",
+        "build:local": "NEXLEV_ENV=local n8n-node build",
+        "build:prod": "NEXLEV_ENV=prod n8n-node build",
+        "build:watch": "tsc --watch",
+        "dev": "n8n-node dev",
+        "link": "npm link",
+        "lint": "n8n-node lint",
+        "lint:fix": "n8n-node lint --fix",
+        "release": "n8n-node release",
+        "prepublishOnly": "n8n-node prerelease"
+    },
+    "files": [
+        "dist"
+    ],
+    "n8n": {
+        "n8nNodesApiVersion": 1,
+        "credentials": [
+            "dist/credentials/NexlevApi.credentials.js"
+        ],
+        "nodes": [
+            "dist/nodes/Nexlev/Nexlev.node.js"
+        ]
+    },
+    "devDependencies": {
+        "@n8n/node-cli": "*",
+        "@types/node": "^24.7.2",
+        "eslint": "9.32.0",
+        "prettier": "3.6.2",
+        "release-it": "^19.0.4",
+        "typescript": "5.9.2"
+    },
+    "peerDependencies": {
+        "n8n-workflow": "*"
+    }
+}
