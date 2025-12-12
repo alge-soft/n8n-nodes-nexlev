@@ -6,6 +6,7 @@ import { videoDetailsGetTranscriptDescription } from './getTranscript';
 import { videoDetailsGetBulkTranscriptDescription } from './getBulkTranscript';
 import { videoDetailsGetSubtitleDescription } from './getSubtitle';
 import { videoDetailsGetBulkSubtitleDescription } from './getBulkSubtitle';
+import { videoDetailsGetRPMDescription } from './getRPM';
 
 const showOnlyForVideosAndShorts = {
 	resource: ['videosAndShorts'],
@@ -70,6 +71,18 @@ export const videoDetailsDescription: INodeProperties[] = [
 				},
 			},
 			{
+				name: 'Get RPM',
+				value: 'getRPM',
+				action: 'Get video RPM',
+				description: 'Get RPM (Revenue Per Mille) for a YouTube video',
+				routing: {
+					request: {
+						method: 'GET',
+						url: '/external/videos/rpm',
+					},
+				},
+			},
+			{
 				name: 'Get Shorts Details',
 				value: 'getShortsDetails',
 				action: 'Get shorts details',
@@ -110,6 +123,7 @@ export const videoDetailsDescription: INodeProperties[] = [
 	},
 	...videoDetailsGetCommentsDescription,
 	...videoDetailsGetDetailsDescription,
+	...videoDetailsGetRPMDescription,
 	...videoDetailsGetShortsDetailsDescription,
 	...videoDetailsGetTranscriptDescription,
 	...videoDetailsGetBulkTranscriptDescription,
