@@ -5,6 +5,7 @@ const getVideos_1 = require("./getVideos");
 const getShorts_1 = require("./getShorts");
 const getAbout_1 = require("./getAbout");
 const getPlaylists_1 = require("./getPlaylists");
+const getOutliers_1 = require("./getOutliers");
 const showOnlyForChannelContent = {
     resource: ['channelContent'],
 };
@@ -27,6 +28,18 @@ exports.channelContentDescription = [
                     request: {
                         method: 'GET',
                         url: '/external/channels/about',
+                    },
+                },
+            },
+            {
+                name: 'Get Outliers',
+                value: 'getOutliers',
+                action: 'Get channel outliers',
+                description: 'Get outlier videos from a YouTube channel',
+                routing: {
+                    request: {
+                        method: 'GET',
+                        url: '/outliers',
                     },
                 },
             },
@@ -70,6 +83,7 @@ exports.channelContentDescription = [
         default: 'getVideos',
     },
     ...getAbout_1.channelContentGetAboutDescription,
+    ...getOutliers_1.channelContentGetOutliersDescription,
     ...getPlaylists_1.channelContentGetPlaylistsDescription,
     ...getVideos_1.channelContentGetVideosDescription,
     ...getShorts_1.channelContentGetShortsDescription,
