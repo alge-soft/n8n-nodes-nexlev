@@ -39,7 +39,7 @@ exports.channelContentDescription = [
                 routing: {
                     request: {
                         method: 'GET',
-                        url: '/outliers',
+                        url: '/external/outliers',
                     },
                 },
             },
