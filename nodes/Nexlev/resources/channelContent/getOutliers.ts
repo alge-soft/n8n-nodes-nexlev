@@ -28,7 +28,6 @@ export const channelContentGetOutliersDescription: INodeProperties[] = [
 		name: 'maxVideos',
 		type: 'number',
 		default: 100,
-		required: false,
 		displayOptions: {
 			show: showOnlyForChannelContentGetOutliers,
 		},
@@ -49,7 +48,6 @@ export const channelContentGetOutliersDescription: INodeProperties[] = [
 		name: 'minOutlierThreshold',
 		type: 'number',
 		default: 2.0,
-		required: false,
 		displayOptions: {
 			show: showOnlyForChannelContentGetOutliers,
 		},

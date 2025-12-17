@@ -39,7 +39,7 @@ export const channelContentDescription: INodeProperties[] = [
 				routing: {
 					request: {
 						method: 'GET',
-						url: '/outliers',
+						url: '/external/outliers',
 					},
 				},
 			},
