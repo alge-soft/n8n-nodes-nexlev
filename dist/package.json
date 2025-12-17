@@ -1,6 +1,6 @@
 {
     "name": "@nexlev/n8n-nodes-nexlev",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "description": "n8n community node for Nexlev",
     "license": "MIT",
     "homepage": "https://nexlev.io",
