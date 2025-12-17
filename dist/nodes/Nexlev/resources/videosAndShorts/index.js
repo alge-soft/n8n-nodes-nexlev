@@ -8,6 +8,7 @@ const getTranscript_1 = require("./getTranscript");
 const getBulkTranscript_1 = require("./getBulkTranscript");
 const getSubtitle_1 = require("./getSubtitle");
 const getBulkSubtitle_1 = require("./getBulkSubtitle");
+const getRPM_1 = require("./getRPM");
 const showOnlyForVideosAndShorts = {
     resource: ['videosAndShorts'],
 };
@@ -70,6 +71,18 @@ exports.videoDetailsDescription = [
                 },
             },
             {
+                name: 'Get RPM',
+                value: 'getRPM',
+                action: 'Get video RPM',
+                description: 'Get RPM (Revenue Per Mille) for a YouTube video',
+                routing: {
+                    request: {
+                        method: 'GET',
+                        url: '/external/videos/rpm',
+                    },
+                },
+            },
+            {
                 name: 'Get Shorts Details',
                 value: 'getShortsDetails',
                 action: 'Get shorts details',
@@ -110,6 +123,7 @@ exports.videoDetailsDescription = [
     },
     ...getComments_1.videoDetailsGetCommentsDescription,
     ...getDetails_1.videoDetailsGetDetailsDescription,
+    ...getRPM_1.videoDetailsGetRPMDescription,
     ...getShortsDetails_1.videoDetailsGetShortsDetailsDescription,
     ...getTranscript_1.videoDetailsGetTranscriptDescription,
     ...getBulkTranscript_1.videoDetailsGetBulkTranscriptDescription,

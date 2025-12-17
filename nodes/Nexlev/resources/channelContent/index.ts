@@ -3,6 +3,7 @@ import { channelContentGetVideosDescription } from './getVideos';
 import { channelContentGetShortsDescription } from './getShorts';
 import { channelContentGetAboutDescription } from './getAbout';
 import { channelContentGetPlaylistsDescription } from './getPlaylists';
+import { channelContentGetOutliersDescription } from './getOutliers';
 
 const showOnlyForChannelContent = {
 	resource: ['channelContent'],
@@ -27,6 +28,18 @@ export const channelContentDescription: INodeProperties[] = [
 					request: {
 						method: 'GET',
 						url: '/external/channels/about',
+					},
+				},
+			},
+			{
+				name: 'Get Outliers',
+				value: 'getOutliers',
+				action: 'Get channel outliers',
+				description: 'Get outlier videos from a YouTube channel',
+				routing: {
+					request: {
+						method: 'GET',
+						url: '/outliers',
 					},
 				},
 			},
@@ -70,6 +83,7 @@ export const channelContentDescription: INodeProperties[] = [
 		default: 'getVideos',
 	},
 	...channelContentGetAboutDescription,
+	...channelContentGetOutliersDescription,
 	...channelContentGetPlaylistsDescription,
 	...channelContentGetVideosDescription,
 	...channelContentGetShortsDescription,
